@@ -9,8 +9,8 @@ const app = express();
 const server = http.createServer(app); //creating this since socket.io use this 
 
 // Middleware
-app.use(cors());
 app.use(express.json({limit:'4mb'}));
+app.use(cors());
 
 app.use("/api/status", (req,res) =>{
     res.send("server is live")
